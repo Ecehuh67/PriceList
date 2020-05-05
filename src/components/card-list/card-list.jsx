@@ -4,7 +4,8 @@ import App from '../app/app';
 
 const CardList = (props) => {
 
-  const {headers} = props;
+  const {param} = props;
+  const {headers, route} = param;
 
   return (
     <ul className="main-page_list">
@@ -16,8 +17,16 @@ const CardList = (props) => {
               key={i}
             >
               <Link
-                style={{textDecoration: 'none', color: 'black', display: 'flex', justifyContent: 'center', width: '100%'}}
-                to={AppRoutes.CD}
+                style={
+                  {
+                    textDecoration: 'none',
+                    color: 'black', 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    width: '100%'
+                  }
+                }
+                to={route}
               >
                 <h2>{header}</h2>
               </Link>

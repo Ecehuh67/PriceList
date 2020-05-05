@@ -6,5 +6,6 @@ export const MACHINE_LIST = [
 
 export const AppRoutes = {
   MAIN: `/`,
-  CD: `/id`
+  CHASSIS: '/chassis',
+  
 };

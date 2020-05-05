@@ -1,19 +1,17 @@
-import CardList from "../card-list/card-list";
-import { MACHINE_LIST } from "../../consts";
+import Body from '../body/body';
+import Sidebar from '../sidebar/sidebar';
+import {AppContext} from '../app-provider/app-provider';
 
-const MainPage = () => {
+const MainPage = (props) => {
+const {...arg} = props;
 
   return (
-      <section className="main-page">
-        <h1 className="main-page_caption">Choose definite configuration:</h1>
-        <div className="main-page_list-wrapper">
-
-          <CardList
-            headers={MACHINE_LIST}
-          />
-          
-        </div>
-      </section>
+    <div className="html-wrapper">
+      <Sidebar/>
+      <Body
+        args={arg}
+      />
+    </div>
   )
 };
 
