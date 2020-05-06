@@ -1,7 +1,7 @@
 import {createBlocksChainId, createMapIdProducts} from './utils/utils';
 
 // ============================================================= PRODUCTS ======================================================
-const BaseChassis = {
+export const BaseChassis = {
   id: 0,
   name: 'based chassis',
   types: [
@@ -464,4 +464,4 @@ export const RoadCleners = createBlocksChainId(RoadClener, false);
 export const FrontBlades = createBlocksChainId(FrontBlade, false);
 export const WaterSystems = createBlocksChainId(WaterSystem, false);
 
-console.log(BaseChassises)
+// console.log(BaseChassises)

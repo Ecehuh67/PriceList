@@ -1,12 +1,15 @@
 const AppContext = React.createContext();
 
 const AppProvider = (props) => {
-  const smth = '555';
-  const el = () => {};
+  const [base, setBase] = React.useState([]);
+  const [preview, setPreview] = React.useState(0);
+
 
   const sampleAppContext = {
-    smth,
-    el
+    base,
+    setBase,
+    preview,
+    setPreview
   };
 
   return (

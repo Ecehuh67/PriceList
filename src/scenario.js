@@ -1,20 +1,18 @@
-const COMMON_STEPS = [
+import {BaseChassis} from './data'; 
+
+export const BasedSteps = [
   {
-    step: 1,
-    title: 'Please, chosse basic chassis:',
-    type: [
-      'based chassis'
-    ]
-  },
-  {
-    step: 2,
-    title: 'Nice, then choose definite functional for the Road Machine',
-    types: [
-      'Salt spreading', 'Watering', 'Salt spreading and Watering'
+    preview: 0,
+    title: `Let's start, you have to choose on of the following points`,
+    headers: [
+      'Second hand road machine',
+      'New combined road machine',
+      'Parts'
     ],
   },
-    {
-      step: 3,
-      title: 'Good, let&quot;s choose'
-    }
+  {
+    preview: 1,
+    title: 'Please, chosse basic chassis:',
+    headers: BaseChassis.types.map(it => it.name)
+  }
 ];

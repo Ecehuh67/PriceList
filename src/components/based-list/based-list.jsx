@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom';
 import {AppContext} from '../app-provider/app-provider';
 
-const CardList = (props) => {
+const BasedList = (props) => {
+
   const {preview, setPreview} = React.useContext(AppContext);
 
-  const {headers, route} = props;
+  const {route, headers} = props;
 
   return (
     <ul className="main-page_list">
@@ -16,6 +17,11 @@ const CardList = (props) => {
               key={i}
               onClick={
                 () => {
+                  if (preview === 1) {
+                    setPreview(0)
+                  } else {
+                    setPreview(prev => prev + 1)
+                  }
                 }
               }
             >
@@ -41,4 +47,4 @@ const CardList = (props) => {
   );
 };
 
-export default CardList;
+export default BasedList;

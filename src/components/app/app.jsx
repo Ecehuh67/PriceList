@@ -3,8 +3,8 @@ import MainPage from '../main-page/main-page';
 import {AppRoutes, MACHINE_LIST} from '../../consts';
 import {
   BaseChassises,
-
 } from '../../data';
+import {BasedSteps} from '../../scenario';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 
 
@@ -15,15 +15,15 @@ const App = () => {
         <Switch>
           <Route exact path={AppRoutes.MAIN}>
               <MainPage
-                title={'title'}
-                headers={MACHINE_LIST}
+                isBased={true}
+                scenario={BasedSteps}
                 route={AppRoutes.CHASSIS}
               />
           </Route>
           <Route exact path={AppRoutes.CHASSIS}>
             <MainPage
-              title={'title'}
-              headers={BaseChassises.map(it => it.name)}
+              isBased={true}
+              scenario={BasedSteps}
               route={AppRoutes.MAIN}
             />
           </Route>
