@@ -12,7 +12,16 @@ export const BasedSteps = [
   },
   {
     preview: 1,
-    title: 'Please, chosse basic chassis:',
+    title: 'Please, choose basic chassis:',
     headers: BaseChassis.types.map(it => it.name)
+  },
+  {
+    preview: 2,
+    title: 'Good, now you have to choose the type of systems:',
+    headers: [
+      'Salt Sprad System',
+      'Watering System',
+      'Salt and Watering System'
+    ]
   }
 ];

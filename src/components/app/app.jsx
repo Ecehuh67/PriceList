@@ -24,6 +24,13 @@ const App = () => {
             <MainPage
               isBased={true}
               scenario={BasedSteps}
+              route={AppRoutes.TYPE_SYSTEM}
+            />
+          </Route>
+          <Route exact path={AppRoutes.TYPE_SYSTEM}>
+            <MainPage
+              isBased={true}
+              scenario={BasedSteps}
               route={AppRoutes.MAIN}
             />
           </Route>

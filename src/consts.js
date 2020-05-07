@@ -7,5 +7,5 @@ export const MACHINE_LIST = [
 export const AppRoutes = {
   MAIN: `/`,
   CHASSIS: '/chassis',
-  
+  TYPE_SYSTEM: '/system-type',
 };

@@ -2,10 +2,11 @@ import {Link} from 'react-router-dom';
 import {AppContext} from '../app-provider/app-provider';
 
 const BasedList = (props) => {
-
-  const {preview, setPreview} = React.useContext(AppContext);
+  const {preview, setPreview, setBase, base} = React.useContext(AppContext);
 
   const {route, headers} = props;
+
+  console.log(base)
 
   return (
     <ul className="main-page_list">
@@ -15,12 +16,21 @@ const BasedList = (props) => {
             <li 
               className="main-page_list-item"
               key={i}
+              data-value={header}
               onClick={
-                () => {
-                  if (preview === 1) {
-                    setPreview(0)
+                (evt) => {
+                  const value =evt.currentTarget.dataset.value;
+
+                  if (base.length === 3) {
+                    setBase(prev => prev);
                   } else {
-                    setPreview(prev => prev + 1)
+                    setBase(prev => [...prev, value]);
+                  }
+
+                  if (preview === 2) {
+                    setPreview(0);
+                  } else {
+                    setPreview(prev => prev + 1);
                   }
                 }
               }
@@ -35,7 +45,7 @@ const BasedList = (props) => {
                     width: '100%'
                   }
                 }
-                to={route}
+                to={typeof route === 'string'? route : route[i]}
               >
                 <h2>{header}</h2>
               </Link>
