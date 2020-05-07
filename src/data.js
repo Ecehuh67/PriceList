@@ -464,4 +464,5 @@ export const RoadCleners = createBlocksChainId(RoadClener, false);
 export const FrontBlades = createBlocksChainId(FrontBlade, false);
 export const WaterSystems = createBlocksChainId(WaterSystem, false);
 
-// console.log(BaseChassises)
+console.log(BaseChassises[0].id.toString().slice(0,1))
+console.log(UnderFrames)

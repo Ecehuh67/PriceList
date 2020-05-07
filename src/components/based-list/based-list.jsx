@@ -27,11 +27,11 @@ const BasedList = (props) => {
                     setBase(prev => [...prev, value]);
                   }
 
-                  if (preview === 2) {
-                    setPreview(0);
-                  } else {
-                    setPreview(prev => prev + 1);
-                  }
+                  // if (preview === 2) {
+                  //   setPreview(0);
+                  // } else {
+                  //   setPreview(prev => prev + 1);
+                  // }
                 }
               }
             >

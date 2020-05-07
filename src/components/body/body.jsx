@@ -10,6 +10,8 @@ const Body = (props) => {
 
   const currentData = scenario[preview];
 
+  console.log(currentData)
+
   return (
       <section className="main-page">
         <h1 className="main-page_caption">{currentData.title}</h1>
