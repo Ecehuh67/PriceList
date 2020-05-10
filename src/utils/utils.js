@@ -9,6 +9,7 @@ export const createBlocksChainId = (arg, diffirent=true) => {
           id: +`${diffirent ? i + 1 : 1}0${arg.id}${diffirent ? 1 : i + 1}`,
           name: arg.types[i].name,
           value: arg.types[i].value,
+          available: arg.types[i].available ? arg.types[i].available : null,
           parent: {
             id: arg.id,
             name: arg.name

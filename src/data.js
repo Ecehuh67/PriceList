@@ -26,15 +26,18 @@ const UnderFrame = {
   types: [
     {
       name: 'underframe 6520',
-      value: 50000
+      value: 50000,
+      available: 1001
     },
     {
       name: 'underframe 65115 tipper',
-      value: 55000
+      value: 55000,
+      available: 2001
     },
     {
       name: 'underframe 65115 chassis',
-      value: 10000
+      value: 10000,
+      available: 3001
     }
   ]
 };
@@ -45,7 +48,7 @@ const Grille = {
   types: [
     {
       name: 'grille without a tent',
-      value: 20000
+      value: 20000,
     },
     {
       name: 'grille with a tent',
@@ -71,15 +74,18 @@ const HydraulicSystem = {
   types: [
     {
       name: 'hydraulic 6520',
-      value: 30000
+      value: 30000,
+      available: 1001
     },
     {
       name: 'hydraulic 65115 tipper',
-      value: 30000
+      value: 30000,
+      available: 2001
     },
     {
       name: 'hydraulic 65115 chassis',
-      value: 30000
+      value: 30000,
+      available: 3001
     },
   ]
 };
@@ -192,15 +198,18 @@ const ElecticSystem = {
   types: [
     {
       name: 'electric system for 6520',
-      value: 30000
+      value: 30000,
+      available: 1001
     },
     {
       name: 'electric system for 65115 tipper',
-      value: 32000
+      value: 32000,
+      available: 2001
     },
     {
       name: 'electric system for 65115 chassis',
-      value: 31000
+      value: 31000,
+      available: 3001
     },
   ]
 };
@@ -211,47 +220,49 @@ const FrontPlate = {
   types: [
     {
       name: 'front plate for 6520',
-      value: 3000
+      value: 3000,
+      available: 1001
     },
     {
       name: 'front plate for 65115',
-      value: 5000
+      value: 5000,
+      available: [2001, 3001]
     }
   ]
 };
 
-const SaltSpreadSystem = {
+export const SaltSpreadSystem = {
   id: 1000,
   name: 'salt spread system',
   types: [
     {
       name: 'SaltDog 518',
-      value: 300000
+      value: 300000,
+      available: [1001, 3001]
     },
     {
       name: 'SaltDog 223',
-      value: 302000
-    },
-    {
-      name: 'SaltDog 704',
-      value: 310000
+      value: 302000,
+      available: 2001
     },
     {
       name: 'Smolmash 10,5 cubic metres',
-      value: 310000
+      value: 310000,
+      available: [1001, 3001]
     },
     {
       name: 'Smolmash 8,5 cubic metres',
-      value: 310000
+      value: 310000,
+      available: 2001
     },
-    {
-      name: 'Berma 16 cubic metres',
-      value: 310000
-    },
-    {
-      name: 'Berma 14 cubic metres',
-      value: 310000
-    }
+    // {
+    //   name: 'Berma 16 cubic metres',
+    //   value: 310000
+    // },
+    // {
+    //   name: 'Berma 14 cubic metres',
+    //   value: 310000
+    // }
   ]
 };
 
@@ -367,7 +378,7 @@ const FrontBlade = {
   ]
 };
 
-const WaterSystem = {
+export const WaterSystem = {
   id: 1500,
   name: 'water system',
   types: [
@@ -464,5 +475,5 @@ export const RoadCleners = createBlocksChainId(RoadClener, false);
 export const FrontBlades = createBlocksChainId(FrontBlade, false);
 export const WaterSystems = createBlocksChainId(WaterSystem, false);
 
-console.log(BaseChassises[0].id.toString().slice(0,1))
-console.log(UnderFrames)
+// console.log(BaseChassises)
+// console.log(UnderFrames)

@@ -4,9 +4,7 @@ import {AppContext} from '../app-provider/app-provider';
 const BasedList = (props) => {
   const {preview, setPreview, setBase, base} = React.useContext(AppContext);
 
-  const {route, headers} = props;
-
-  console.log(base)
+  const {route, headers, keys} = props;
 
   return (
     <ul className="main-page_list">
@@ -16,7 +14,7 @@ const BasedList = (props) => {
             <li 
               className="main-page_list-item"
               key={i}
-              data-value={header}
+              data-value={keys[i]}
               onClick={
                 (evt) => {
                   const value =evt.currentTarget.dataset.value;
@@ -27,11 +25,11 @@ const BasedList = (props) => {
                     setBase(prev => [...prev, value]);
                   }
 
-                  // if (preview === 2) {
-                  //   setPreview(0);
-                  // } else {
-                  //   setPreview(prev => prev + 1);
-                  // }
+                  if (preview === 2) {
+                    setPreview(0);
+                  } else {
+                    setPreview(prev => prev + 1);
+                  }
                 }
               }
             >

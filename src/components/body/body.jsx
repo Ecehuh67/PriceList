@@ -10,7 +10,7 @@ const Body = (props) => {
 
   const currentData = scenario[preview];
 
-  console.log(currentData)
+  // console.log(currentData)
 
   return (
       <section className="main-page">
@@ -22,6 +22,7 @@ const Body = (props) => {
             <BasedList
               headers={currentData.headers}
               route={route}
+              keys={currentData.keys}
             />
           }
 

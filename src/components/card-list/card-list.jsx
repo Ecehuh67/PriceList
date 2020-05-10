@@ -5,6 +5,8 @@ const CardList = (props) => {
   const {preview, setPreview} = React.useContext(AppContext);
 
   const {headers, route} = props;
+  
+  console.log('card list')
 
   return (
     <ul className="main-page_list">
